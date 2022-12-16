@@ -1,14 +1,24 @@
 # Born2beroot
+
 Study record
+
 Virtual Machine :
+
   . Software that emulates another computer in a virtual environment that behaves like a computer within a computer.
+
   . Born to use one physical server more efficiently.
+
   . The software used is limited by the environment and resources provided by the virtual machine and cannot escape from the virtual world.
+
   . All functions of all parts are implemented in software. Best in versatility.
+
   . A technology that enables multiple operating systems to run on a single physical server.
+
   . Provides a UI to a virtual machine that is similar to, but not identical to, the underlying hardware and software.
+
   . If you want to run two or more different operating systems on one computer at the same time.
-Difference between Rocky and Debian :
+ 
+ Difference between Rocky and Debian :
   . Rocky :
     . Rocky Linux is a free distribution for Linux, which is based on Red Hat Enterprise Linux and is intended to replace CentOS.
     . Linux distribution.
