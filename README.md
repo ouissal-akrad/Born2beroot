@@ -1,55 +1,126 @@
-# Born2beroot
+# Born2beroot : Study record
 
-Study record
+- **Virtual Machine :**
+    - Software that emulates another computer in a virtual environment that behaves like a computer within a computer.
+    - Born to use one physical server more efficiently.
+    - The software used is limited by the environment and resources provided by the virtual machine and cannot escape from the virtual world.
+    - All functions of all parts are implemented in software. Best in versatility.
+    - A technology that enables multiple operating systems to run on a single physical server.
+    - Provides a UI to a virtual machine that is similar to, but not identical to, the underlying hardware and software.
+    - If you want to run two or more different operating systems on one computer at the same time.
+- **Difference between Rocky and Debian :**
+    - Rocky :
+        - Rocky is a free distribution for Linux, which is based on RedHat Enterprise Linux and is intended to replace CentOS.
+        - Linux distribution.
+        - Supported by RedHat.
+        - Since it is open source, updates are slow. Technical support too.
+        - No easy GUI.
+    - Debian :
+        - Operating system as an open source component.
+        - Created and distributed by online communities.
+        - Linux as Kernel.
+        - has many packages.
+        - Ease of upgrade.
+        - It has a desktop-friendly GUI.
+- **Difference between apt and aptitude :**
+    - apt :
+        - apt (advanced packaging tool) : Used as a command line without a graphical interface. If you enter the name of a package to be installed, you do not have to worry about dependency problems because it is automatically installed by finding the corresponding package + dependency list in the source list stored in '/etc/apt/sources.list'. It is free and open source, and has a high degree of freedom.
+        - apt is used to download and install packages from online repositories.
+        - Actually apt works with dpkg. However, most package management tasks such as searching for necessary software, downloading, installing, upgrading, and checking can be done with apt alone.
+        - Free, open-source software that gracefully handles software installation and uninstallation.
+        - Initially designed for Debian, but made compatible with RPM package managers.
+    - dpkg :
+        - dpkg is commonly used to control .deb files on cdrooms or other disk devices. The dpkg command has options used to set up or install system software and get information about it. It runs at a lower level than apt. apt uses dpkg internally to manage Ubuntu's software. Usually, the apt command is sufficient, but the dpkg command is needed to perform tasks such as checking which packages contain certain files on the system.
+    - aptitude :
+        - A package management tool that adds a user interface so users can interactively search for, install, and remove packages. It has more functions than apt, is more convenient, and automatically removes unused packages, or suggests other alternatives in case of conflicts during the installation or update process.
+        - In the case of dpkg and apt, more knowledge is required to use them properly. In comparison, aptitude makes it easier because it automates key packaging workflows to make things as easy as possible. It can also automatically remove unused packages. In addition to apt-get, tools such as apt-chche and apt-mark are also used. aptitude provides alternatives in case of conflicts during installation, uninstallation or update process. apt just says no.
+        - High-level package manager.
+        - Suggests appropriate action in case of conflict during package installation or deletion.
+        - Automatically remove unused packages.
+- **What is APPArmor :**
+    - AppArmor is an application that allows system administrators to limit a program's capabilities per program profile.
+    - App Armor allows which applications can access which files/paths through policy files.
+    - A Linux kernel security module that allows system administrators to limit a program's capabilities per program profile.
+    - Products like CentOS and derivatives use SELinux, most others use APPArmor.
+    - There are two modes, enforce mode and complain mode. Enforce mode denies access to unauthorized files, complain mode does not actually provide security, and App Armor leaves a log when the application does something other than what it should do.
+    - Concentrate on protecting individual applications and implement an application-level security model.
+- **SUDO :**
+    - It is a good practice in terms of system stability and security to block logging in as root according to the least privilege rule and restrict execution using the sudo command only when root privileges are required.Also, if you su root, it's impossible to see what you did. If you use sudo, logging by command unit is possible, so you can check accurate records.
+    - visudo :
+        - If you edit the /etc/sudoers file with a normal editor, you will not be able to escalate privileges with sudo if you accidentally make a mistake. visudo does a syntax check on save, so you can fix problems caused by incorrect syntax.
+    - Secure Path :
+        - Provides the primary defense against Trojan Horse hacking attacks. If the PATH of the current account contains a malicious path, ignoring it prevents the whole system from being hacked through sudo.
+    - usermod:
+        - a: This is an option used together with the G option, and is used when specifying an additional secondary group in addition to the existing secondary group.
+        - G : It is used to make it belong to another group in addition.
+        - g : Change the group to be the primary group.
+- **SSH (Secure Shell) :**
+    - Security protocol used to connect to the remote host.
+    - It came out because the existing telnet did not provide encryption, so it was vulnerable to security.
+    - As one of the network protocols, a protocol used to securely communicate when computers communicate over a network such as the Internet (eg data transmission, remote control)
+- How it Works :
+    - The client and the host each hold a key and use it to encrypt data sent and received. Even if someone intercepts it in the middle, it is not known what information it is because it is encrypted.
+    - When ssh connects for communication, it goes through an authentication process using a pair of KEYs rather than a common password.
+    - Encryption is performed using the public key, and decryption is performed using the private key stored in the user's computer.
 
-Virtual Machine :
-
-  . Software that emulates another computer in a virtual environment that behaves like a computer within a computer.
-
-  . Born to use one physical server more efficiently.
-
-  . The software used is limited by the environment and resources provided by the virtual machine and cannot escape from the virtual world.
-
-  . All functions of all parts are implemented in software. Best in versatility.
-
-  . A technology that enables multiple operating systems to run on a single physical server.
-
-  . Provides a UI to a virtual machine that is similar to, but not identical to, the underlying hardware and software.
-
-  . If you want to run two or more different operating systems on one computer at the same time.
- 
- Difference between Rocky and Debian :
-  . Rocky :
-    . Rocky Linux is a free distribution for Linux, which is based on Red Hat Enterprise Linux and is intended to replace CentOS.
-    . Linux distribution.
-    . Supported by RedHat.
-    . Since it is open source, updates are slow. Technical support too.
-    . No easy GUI.
-  . Debian :
-    . Operating system as an open source component.
-    . Created and distributed by online communities.
-    . Linux as Kernel.
-    . has many packages.
-    . Ease of upgrade.
-    . It has a desktop-friendly GUI.
- Difference between apt and aptitude :
-  . apt :
-    . apt is used to download and install packages from online repositories.
-    . Actually apt works with dpkg. However, most package management tasks such as searching for necessary software, downloading, installing, upgrading, and checking can be done with apt alone.
-    . Free, open-source software that gracefully handles software installation and uninstallation.
-    . Initially designed for Debian, but made compatible with RPM package managers.
-  . dpkg :
-    . dpkg is commonly used to control .deb files on cdrooms or other disk devices. The dpkg command has options used to set up or install system software and get information about it. It runs at a lower level than apt. apt uses dpkg internally to manage Ubuntu's software. Usually, the apt command is sufficient, but the dpkg command is needed to perform tasks such as checking which packages contain certain files on the system.
-  . aptitude :
-    . In the case of dpkg and apt, more knowledge is required to use them properly. In comparison, aptitude makes it easier because it automates key packaging workflows to make things as easy as possible. It can also automatically remove unused packages. In addition to apt-get, tools such as apt-chche and apt-mark are also used. aptitude provides alternatives in case of conflicts during installation, uninstallation or update process. apt just says no.
-    . High-level package manager.
-    . Suggests appropriate action in case of conflict during package installation or deletion.
-    . Automatically remove unused packages.
- What is APPArmor :
-  . AppArmor is an application that allows system administrators to limit a program's capabilities per program profile. 
-  . App Armor allows which applications can access which files/paths through policy files.
-  . A Linux kernel security module that allows system administrators to limit a program's capabilities per program profile.
-  . Products like CentOS and derivatives use SELinux, most others use APPArmor.
-  . There are two modes, enforce mode and complain mode. Enforce mode denies access to unauthorized files, complain mode does not actually provide security, and App Armor leaves a log when the application does something other than what it should do.
-  . Concentrate on protecting individual applications and implement an application-level security model.
-
+- **LVM (Logical Volume Manager) :**
+    - LVM allocates physical disks as logical disks and allows flexible management. That is, multiple hard disk spaces can be combined like a discand used, and the space of an existing disk can be freely expanded. Also `partitions`, the ambiguous space of can be utilized.
+    - A part of the kernel to efficiently and flexibly manage Logical Volumes
+    - LVM allows you to combine multiple disk spaces and remnants into one
+    - When the space on the existing disk runs out, you can add space on another disk to use.
+    - Multiple storage spaces can be used as one space
+- **PE, PV, VG, LV, LE :**
+    - 
+    - PV is a physical space like the existing disk space, PE is the smallest unit that makes up a PV (PV is a collection of PEs)
+    - Collect PV to create VG (Volume Group)
+    - Create and use LV (Logical Volume) as needed in VG
+    - LE is PE used in LV
+    - **lsblk**
+        - check the partition
+- **What is UFW :**
+    - It helps to simplify the configuration of iptable, a firewall management program that works in Debian and Linux environments, and is the most used firewall in Linux.
+    - A firewall is a system for protecting an internal information network by unifying the passage of the network. Access control is performed by separating the external network from the internal network.
+    - Among them, iptables is a tool to configure a firewall on Linux, and is a firewall tool that replaces ipchains used in kernel versions prior to 2.4. iptables can use the netfilter packet filtering function in the kernel at a user-space level of control.
+    - Packet filtering refers to determining the fate of the entire packet by looking at the headers of passing packets. In general, a packet has a header and data.
+    - UFW (Uncomplicated Firewall) is an iptables configuration tool and means an uncomplicated firewall. UFW came out because iptables was complicated to configure and manage.
+- **What is cron :**
+    - This command is used when you want to automatically perform a certain task at a specific time or every specific time. In the cron system, there is a system cron that is basically used in the system, and a user cron that root or general users set up their own cron.
+    - You can schedule periodic recurring tasks to run automatically, as well as perform security vulnerability scans.
+    - Script :
+        - username: Kernel name with -a option as a system information output command. You can check the network host name, kernel release information, kernel version, system hardware type (architecture), and operating system name information.
+        - nproc: Displays the number of all installed cores/processes. /proc/cpuinfo contains CPU information. grep processor to find only the process and print the number.
+        - free: You can check the system memory usage status and display it in megabytes with the -m option.
+        - df : This command displays the usage of file system disk space.
+        - top: It is possible to grasp the overall status of the system most quickly.
+            - -b : Instantaneous information can be checked (batch mode)
+            - n: Sets the top execution cycle.
+            - 1 : Shows usage by CPU core.
+        - link: Displays and modifies network interfaces. Display related interfaces with the show option.
+        - journalctl: Linux Log Check _COMM allows you to check a specific log.
+- **Check :**
+    - hostname and partition :
+        - check partition : lsblk
+        - change hostname : sudo vim /etc/hostname
+    - user :
+        - sudo group users : getent group sudo
+        - user42 group users : getent group user42
+        - create a new user :
+            - sudo adduser <username>
+        - passwrd info : sudo chage -l <username>
+        - assign a new user to sudo : sudo adduser <username> sudo
+        - assign a new user to user42 : sudo adduser<username> user42
+        - Create a new group :  sudo groupadd <groupname>
+            - assign a new user : sudo adduser <username> <groupname>
+        - Check list of groups : sudo getent group <groupname>
+    - sudo :
+        - is installed : dpkg -l | grep sudo
+    - ssh :
+        - is install : dpkg -l | grep ssh****
+        - is active : sudo service ssh status
+        - port4242 : sudo vim /etc/ssh/sshd_config
+    - UFW :
+        - is intalled : dpkg -l | grep ufw
+        - is working : sudo service ufw status
+        - list the active rule : sudo ufw status
+        - add a new role : sudo ufw allow 8080
+        - delete a rule : sudo ufw delete allow 8080
